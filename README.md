@@ -1,25 +1,23 @@
 # University of Tulsa EE/ECE Report Template
-
-## Word
-Help wanted: 
-Microsoft Word format template
-
-## LaTeX
-LaTeX template
-will be based on examples in `latex/examples` folder.
-Not yet ready to accept contributions
-to LaTex template.
+LaTeX template will be based on examples in 
+`latex/examples` folder.
 
 ## How To Use LaTeX
-1. Download project folder
-2. Compress project folder into `.zip` file
-3. Import `.zip` file into [Overleaf](https://www.overleaf.com/)
-(online collaborative LaTeX editor)
+Download example project folder
+then compile `main.tex` to PDF
+using desktop LaTeX editor such as
+[Texmaker](http://www.xm1math.net/texmaker/).
+OR - compress project folder into `.zip` file
+and import into online collaborative LaTeX editor
+[Overleaf](https://www.overleaf.com/).
 
 ## Learn LaTeX
 Good intro to LaTeX 
 (first of 16 videos in series):
-https://youtu.be/SoDv0qhyysQ.
+https://youtu.be/SoDv0qhyysQ
+
+## Contribute
+Not yet ready to accept contributions.
 
 ## Contact
 Nikita Zdvijkov:
