@@ -1,0 +1,7 @@
+$ python3 factorial.py
+
+please enter a number
+4
+
+factorial of your number:
+24

@@ -1,16 +1,23 @@
+\eceSubsection{Matrices}
+
 \makeatletter
-\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-  \hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{#1}}
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{
+    \hskip -\arraycolsep
+    \let\@ifnextchar\new@ifnextchar
+    \array{#1}}
 \makeatother
-% matrix vertical lign fix source: 
+% augmented matrix fix
 % https://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix/2234
 
+
+
 $$\begin{cases}
-    \dot{m}_1 + \dot{m}_2 = \dot{m}_e \\
-    \dot{m}_1 h_1 + \dot{m}_2 h_2 = \dot{m}_e h_e \\
-    \dot{m}_e s_e - \dot{m}_1 s_1 - \dot{m}_2 s_2 = \dot{S}_{\text{gen}}
+    \dot{m}_1 + \dot{m}_2 
+        = \dot{m}_e \\
+    \dot{m}_1 h_1 + \dot{m}_2 h_2 
+        = \dot{m}_e h_e \\
+    \dot{m}_e s_e - \dot{m}_1 s_1 - \dot{m}_2 s_2 
+        = \dot{S}_{\text{gen}}
 \end{cases}$$
 
 
@@ -19,11 +26,11 @@ $$\Downarrow$$
 
 $$\begin{cases}
     ({1})\dot{m}_1 + ({1})\dot{m}_2 + ({0})\dot{S}_{\text{gen}}
-    = ({\dot{m}_e}) \\
+        = ({\dot{m}_e}) \\
     ({h_1)} \dot{m}_1  + ({h_2)} \dot{m}_2 + (0) \dot{S}_{\text{gen}} 
-    = ({\dot{m}_e h_e}) \\
+        = ({\dot{m}_e h_e}) \\
     ({-s_1})\dot{m}_1 + ({-s_2})\dot{m}_2 + ({-1})\dot{S}_{\text{gen}}
-    = ({-\dot{m}_e s_e})
+        = ({-\dot{m}_e s_e})
 \end{cases}$$
 
 
