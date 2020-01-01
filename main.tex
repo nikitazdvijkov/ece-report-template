@@ -1,0 +1,89 @@
+\documentclass[letterpaper,twoside,notitlepage,12pt]{article}
+\usepackage[utf8]{inputenc}
+\input{preamble.tex}
+
+\begin{document}
+
+\noindent
+Nikita Zdvijkov \\
+EE-1011-01: Comp Tools Elec Engr \\
+September 1, 2019
+
+\begin{center}
+\large{\textbf{UTulsa ECE Report Template}}
+\end{center}
+
+\section{Introduction}
+
+Click \href{https://github.com/nikitazdvijkov/ece-report-template}{here} (\texttt{https://github.com/nikitazdvijkov/ece-report-template}) for more info about this template.
+
+Hint: use the \texttt{\textbackslash input{}} command to organize your code. See what I did for ``table with some cells merged'' section: line 65 of \texttt{main.tex} inserts the content of \texttt{table-with-some-cells-merged.tex} at that point.
+
+\section{Basic examples}
+
+\subsection{Figures}
+
+This is how you reference Figure ~\ref{fig:circuit2}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{circuit.png}
+\end{center}
+\caption{Amplifier circuit}
+\label{fig:circuit2}
+\end{figure}
+
+\subsection{Simple table}
+
+\begin{table}[H]
+\begin{center}
+\caption{\small Source-side measured values: $V$, $I$, $P$, $Q$, and $|S|$}
+\vspace{5mm}
+\begin{tabular}{rrrrr}
+\toprule
+$V$ ($\text{V}_\text{RMS}$) &
+$I$ ($\text{V}_\text{RMS}$) &
+$P$ (W) &
+$Q$ (VAR) &
+$|S|$ (VA) \\ 
+\midrule
+70.11	& 0.038	& 1.97	& X	& X \\
+70.03	& 0.053	& 3.29	& 1.76	& 3.73 \\
+70.05	& 0.070	& 4.60	& 1.80	& 4.93 \\
+70.01	& 0.088	& 5.89	& 1.80	& 6.15 \\
+70.03	& 0.112	& 7.66	& 1.80	& 7.86 \\
+69.97	& 0.136	& 9.40	& 1.84	& 9.57 \\
+69.96	& 0.161	& 11.11	& 1.84	& 11.25 \\
+69.96	& 0.185	& 12.80	& 1.88	& 12.93 \\
+69.91	& 0.232	& 16.10	& 1.92	& 16.21 \\
+69.88	& 0.278	& 19.35	& 2.00	& 19.45 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\input{table-with-some-cells-merged.tex}
+
+\subsection{Code}
+
+\begin{minted}{python}
+#!/usr/bin/python3
+from html.context import Context
+
+def paragraph(html, line_data):
+    line = line_data[0]
+    blank_lines = line_data[1] > 1
+    if blank_lines:
+        html.check_and_close_paragraph()
+        html.add('<p>' + line)
+        html.push()
+        html.need_to_close_paragraph = True
+    else:
+        html.add(html.expand_line(line))
+
+paragraph_dict = {
+    'paragraph':    Context(None, paragraph, None, {})
+}
+\end{minted}
+
+\end{document}
